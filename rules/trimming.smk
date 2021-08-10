@@ -15,7 +15,7 @@ rule adapter_removal:
         minqual = config['trimming']['minqual'],
         maxns = config['trimming']['maxns'],
         mate_separator = config['trimming']['mate_separator']
-    threads: 2
+    threads: 4
     log:
         "logs/adapterremoval/{sample}/{file}.log"
     shell:

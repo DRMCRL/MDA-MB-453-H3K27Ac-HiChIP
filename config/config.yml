@@ -27,7 +27,7 @@ trimming:
 
 # Settings for HicPro
 hicpro:
-  ncpu: 10
+  ncpu: 16
   sort_ram: 1000M
   pair1_ext: _1
   pair2_ext: _2
