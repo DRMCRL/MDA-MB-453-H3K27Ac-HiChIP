@@ -126,7 +126,7 @@ rule hicpro_mapping:
         )
     params:
         outdir = hic_data_path,
-        indir = raw_path
+        indir = trim_path
     threads: config['hicpro']['ncpu']
     conda: "../envs/hicpro.yml"
     shell:
