@@ -23,6 +23,7 @@ trimming:
   maxns: 1
   minlength: 50
   minqual: 30
+  mate_separator: "."
 
 # Settings for HicPro
 hicpro:

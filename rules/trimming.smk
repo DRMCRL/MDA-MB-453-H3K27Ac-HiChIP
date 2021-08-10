@@ -13,7 +13,8 @@ rule adapter_removal:
         adapter2 = config['trimming']['adapter2'],
         minlength = config['trimming']['minlength'],
         minqual = config['trimming']['minqual'],
-        maxns = config['trimming']['maxns']
+        maxns = config['trimming']['maxns'],
+        mate_separator = config['trimming']['mate_separator']
     threads: 2
     log:
         "logs/adapterremoval/{sample}/{file}.log"
@@ -30,6 +31,7 @@ rule adapter_removal:
             --trimqualities \
             --minquality {params.minqual} \
             --minlength {params.minlength} \
+            --mate-separator {params.mate_separator} \
             --output1 {output.t1} \
             --output2 {output.t2} \
             --discarded /dev/null \
