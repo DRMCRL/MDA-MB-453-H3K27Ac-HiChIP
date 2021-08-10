@@ -52,7 +52,7 @@ rule make_hicpro_config:
         ),
         rs = rs_frags,
         chr_sizes = chr_sizes,
-	config = "config/config.yml"
+	      config = "config/config.yml"
     output:
         hicpro_config
     params:
@@ -82,7 +82,7 @@ rule hicpro_mapping:
     input:
         config = hicpro_config,
         files = expand(
-          [trim_path + "/{sample_path}{read_ext}{suffix}"],
+          [raw_path + "/{sample_path}{read_ext}{suffix}"],
           sample_path = df['path'],
           read_ext = read_ext,
           suffix = suffix
@@ -126,7 +126,7 @@ rule hicpro_mapping:
         )
     params:
         outdir = hic_data_path,
-        indir = trim_path
+        indir = raw_path
     threads: config['hicpro']['ncpu']
     conda: "../envs/hicpro.yml"
     shell:

@@ -53,6 +53,17 @@ This is the data setup and preparations for subsequent integration with ChIP-Seq
 No identification of TADs is included.
 This workflow simply aims to identify *significant interactions* (above background) using combinations of bin sizes.
 
+This workflow analyses HiChIP data generated using an antibody for H3K27Ac in MDA-MB-453 cell lines, contained in the SRA/[GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157381) repositories.
+Cells were treated with abemaciclib or DMSO and this workflow only processes the the DMSO sample.
+No replicates were included.
+Data was obtained from SRA using the following commannd
+
+```
+mkdir -p data/raw/fastq/SRR12576438
+cd data/raw/fastq/SRR12576438
+fastq-dump -I --split-files --gzip SRR12576438
+```
+
 - Data was aligned to `r config$ref$build` obtained from Gencode release `r config$ref$gencode`.
 - HiC Interactions were identified using [Hic-Pro v3.0.0](https://github.com/nservant/HiC-Pro/releases/tag/v3.0.0) and bins of `r pander(paste0(as.integer(str_split(config$hicpro$bin_size, pattern = " ")[[1]])/1e3, "kb"))`
 - Bin pairs with numbers of interactions significantly above background were identified using [MaxHiC](https://github.com/Rassa-Gvm/MaxHiC)

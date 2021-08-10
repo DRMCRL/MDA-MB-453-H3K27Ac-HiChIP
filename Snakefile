@@ -164,7 +164,7 @@ wd = os.getcwd()
 rproj = os.path.basename(wd) + ".Rproj"
 WFLOW_OUT = expand(
     ["docs/{file}.html"],
-    file = ['index', 'qc_raw', 'qc_trimmed', 'qc_hic', 'define_interactions']
+    file = ['index', 'qc_raw', 'qc_hic', 'define_interactions']
 )
 ALL_OUTPUTS.extend([rproj])
 ALL_OUTPUTS.extend(WFLOW_OUT)
