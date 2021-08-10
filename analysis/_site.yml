@@ -5,6 +5,8 @@ navbar:
   left:
   - text: Raw Data
     href: qc_raw.html
+  - text: Trimmed Data
+    href: qc_trimmed.html    
   - text: HiC Data
     href: qc_hic.html
   - text: MaxHiC Output

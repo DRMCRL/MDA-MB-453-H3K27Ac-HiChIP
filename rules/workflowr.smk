@@ -16,7 +16,7 @@ rule build_site_index:
         rmd = "analysis/index.Rmd",
         html = expand(
             ["docs/{file}.html"],
-            file = ['qc_raw', 'qc_hic','define_interactions']
+            file = ['qc_raw', 'qc_hic', 'qc_trimmed', 'define_interactions']
         )
     output:
         html = "docs/index.html"

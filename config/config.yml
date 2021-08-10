@@ -18,11 +18,10 @@ fastqc:
 
 # Settings for AdapterRemoval
 trimming:
-  ## NEB Next Kit https://www.biostars.org/p/149301/
-  adapter1: CAAGCAGAAGACGGCATACGAGATNNNNNNGTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT
-  adapter2: AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT
+  adapter1: CTGTCTCTTATACACATCTCCGAGCCCACGAGACAGGCAGAAATCTCGTATGCCGTCTTCTGCTTG
+  adapter2: CTGTCTCTTATACACATCTGACGCTGCCGACGAGTGTAGATCTCGGTGGTCGCCGTATCATT
   maxns: 1
-  minlength: 35
+  minlength: 50
   minqual: 30
 
 # Settings for HicPro
@@ -36,7 +35,7 @@ hicpro:
   phred: 33
   min_mapq: 0
   ligation_site: GATCGATC
-  restriction_site: mboi
+  restriction_site: ^GATC
   bin_size: 5000 10000 20000 40000 100000
   matrix_format: upper
 

@@ -85,7 +85,6 @@ rawFqc <- here::here("data/raw/FastQC") %>%
 A total of `r length(rawFqc)` libraries were contained in this dataset, with read totals ranging between `r pander(comma(range(readTotals(rawFqc)$Total_Sequences)))` reads.
 
 Across all libraries, reads were between `r pander(range(as.numeric(getModule(rawFqc, "Sequence_Length")$Length)))` bases.
-This does indicate some read trimming had been performed prior to that undertaken here.
 
 
 ## Library Sizes

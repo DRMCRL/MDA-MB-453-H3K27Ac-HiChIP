@@ -82,7 +82,7 @@ rule hicpro_mapping:
     input:
         config = hicpro_config,
         files = expand(
-          [raw_path + "/{sample_path}{read_ext}{suffix}"],
+          [trim_path + "/{sample_path}{read_ext}{suffix}"],
           sample_path = df['path'],
           read_ext = read_ext,
           suffix = suffix

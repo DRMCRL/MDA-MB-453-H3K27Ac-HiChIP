@@ -64,7 +64,15 @@ cd data/raw/fastq/SRR12576438
 fastq-dump -I --split-files --gzip SRR12576438
 ```
 
-- Data was aligned to `r config$ref$build` obtained from Gencode release `r config$ref$gencode`.
+- Adapters were manually identified using `bbmerge`
+
+```
+cd data/raw/fastq/SRR12576438
+bbmerge.sh in1=SRR12576438_1.fastq.gz in2=SRR12576438_2.fastq.gz outa=adapters.fa
+cat adapters.fa                      
+```
+
+- Data was aligned to `r config$ref$build` obtained from Gencode release `r config$ref$gencode`
 - HiC Interactions were identified using [Hic-Pro v3.0.0](https://github.com/nservant/HiC-Pro/releases/tag/v3.0.0) and bins of `r pander(paste0(as.integer(str_split(config$hicpro$bin_size, pattern = " ")[[1]])/1e3, "kb"))`
 - Bin pairs with numbers of interactions significantly above background were identified using [MaxHiC](https://github.com/Rassa-Gvm/MaxHiC)
 
