@@ -469,10 +469,16 @@ for (s in levels(samples$sample)) {
 
 # All Cis Interactions {.tabset}
 
-```{r, fig.height=6, fig.width=8}
+```{r bs}
 bs <- str_split(config$hicpro$bin_size, pattern = " ")[[1]] %>% 
   as.integer() %>% 
   max()
+```
+
+The sets of interactions were visualised for all chromosomes using the largest bin size (`r glue("{bs/1e3}kb")`) to provide a 'zoomed-out' view of each chromosome.
+
+
+```{r prepare_interactions_png}
 grl <- here::here(
     glue("output/hic_pro/matrix/merged_{bs}_abs.bed.gz")
   ) %>% 
