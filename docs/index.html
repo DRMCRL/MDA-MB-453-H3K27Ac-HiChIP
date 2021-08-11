@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree61560a318b692956bce9ae1cbe5d90bda5d0ef2ctargetblank61560a3a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/61560a318b692956bce9ae1cbe5d90bda5d0ef2c" target="_blank">61560a3</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree11b0a4d007bc15d2868c3a624b69f0e7d40e52f1targetblank11b0a4da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/11b0a4d007bc15d2868c3a624b69f0e7d40e52f1" target="_blank">11b0a4d</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree61560a318b692956bce9ae1cbe5d90bda5d0ef2ctargetblank61560a3a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree11b0a4d007bc15d2868c3a624b69f0e7d40e52f1targetblank11b0a4da" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/61560a318b692956bce9ae1cbe5d90bda5d0ef2c" target="_blank">61560a3</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/11b0a4d007bc15d2868c3a624b69f0e7d40e52f1" target="_blank">11b0a4d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -507,20 +507,44 @@ Ignored files:
     Ignored:    .snakemake/
     Ignored:    MDA-MB-453-H3K27Ac-HiChIP.Rproj
     Ignored:    data/hic/
+    Ignored:    data/trimmed/fastq/
     Ignored:    logs/
     Ignored:    output/GRCh37/GRCh37_MboI_fragment.bed
     Ignored:    output/GRCh37/GRCh37_MboI_fragment.bed.gz
+    Ignored:    output/hic_pro/allValidPairs/
     Ignored:    scripts/MaxHiC/
 
 Untracked files:
     Untracked:  config/hicpro-config.txt
-    Untracked:  data/trimmed/
-    Untracked:  output/MaxHiC/
-    Untracked:  output/hic_pro/
+    Untracked:  data/trimmed/logs/
+    Untracked:  output/MaxHiC/10000/
+    Untracked:  output/MaxHiC/100000/
+    Untracked:  output/MaxHiC/20000/
+    Untracked:  output/MaxHiC/40000/
+    Untracked:  output/MaxHiC/5000/
+    Untracked:  output/hic_pro/matrix/
 
 Staged changes:
     Modified:   analysis/define_interactions.Rmd
-    Modified:   analysis/qc_hic.Rmd
+    New:        data/trimmed/FastQC/SRR12576438/SRR12576438_1_fastqc.html
+    New:        data/trimmed/FastQC/SRR12576438/SRR12576438_1_fastqc.zip
+    New:        data/trimmed/FastQC/SRR12576438/SRR12576438_2_fastqc.html
+    New:        data/trimmed/FastQC/SRR12576438/SRR12576438_2_fastqc.zip
+    New:        output/MaxHiC/gi_100000_cis.rds
+    New:        output/MaxHiC/gi_100000_trans.rds
+    New:        output/MaxHiC/gi_10000_cis.rds
+    New:        output/MaxHiC/gi_10000_trans.rds
+    New:        output/MaxHiC/gi_20000_cis.rds
+    New:        output/MaxHiC/gi_20000_trans.rds
+    New:        output/MaxHiC/gi_40000_cis.rds
+    New:        output/MaxHiC/gi_40000_trans.rds
+    New:        output/MaxHiC/gi_5000_cis.rds
+    New:        output/MaxHiC/gi_5000_trans.rds
+    New:        output/hic_pro/stats/SRR12576438/SRR12576438.mRSstat
+    New:        output/hic_pro/stats/SRR12576438/SRR12576438.mpairstat
+    New:        output/hic_pro/stats/SRR12576438/SRR12576438_1.mmapstat
+    New:        output/hic_pro/stats/SRR12576438/SRR12576438_2.mmapstat
+    New:        output/hic_pro/stats/SRR12576438/SRR12576438_allValidPairs.mergestat
 
 </code></pre>
 <p>
@@ -559,6 +583,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/11b0a4d007bc15d2868c3a624b69f0e7d40e52f1/docs/index.html" target="_blank">11b0a4d</a>
+</td>
+<td>
+Steve Pederson
+</td>
+<td>
+2021-08-11
+</td>
+<td>
+Updated all
+</td>
+</tr>
 <tr>
 <td>
 html

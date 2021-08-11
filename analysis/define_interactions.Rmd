@@ -285,7 +285,7 @@ for (sz in bin_sizes) {
         glue_collapse(range(gi$counts), last = ' & '),
         .sep = " "
       ),
-      "\n"
+      "\n\n"
     )
     
   }
@@ -333,7 +333,7 @@ for (sz in bin_sizes) {
     labs(
       x = "Chromosome",
       y = "Chromosome",
-      fill = "Bin/Pairs"
+      fill = "Bin\nPairs"
     ) +
     theme(
       axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
@@ -344,7 +344,7 @@ for (sz in bin_sizes) {
     width = 8, height = 6
   )
   cat(
-    glue("![*Trans interactions by chromosome using {sz/1e3}kb bins. Numeric values in the upper corner are only shown for bins with > 1% of the retained interactions*](assets/interaction_summary_{sz}_trans.png)"),
+    glue("![*Trans interactions by chromosome using {sz/1e3}kb bins. Numeric values in the upper section are only shown for chromosome pairs with > 1% of the retained trans interactions*](assets/interaction_summary_{sz}_trans.png)"),
     "\n"
   )
   cat("\n\n")

@@ -484,16 +484,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree61560a318b692956bce9ae1cbe5d90bda5d0ef2ctargetblank61560a3a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/61560a318b692956bce9ae1cbe5d90bda5d0ef2c" target="_blank">61560a3</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree11b0a4d007bc15d2868c3a624b69f0e7d40e52f1targetblank11b0a4da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/11b0a4d007bc15d2868c3a624b69f0e7d40e52f1" target="_blank">11b0a4d</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree61560a318b692956bce9ae1cbe5d90bda5d0ef2ctargetblank61560a3a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree11b0a4d007bc15d2868c3a624b69f0e7d40e52f1targetblank11b0a4da" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/61560a318b692956bce9ae1cbe5d90bda5d0ef2c" target="_blank">61560a3</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/11b0a4d007bc15d2868c3a624b69f0e7d40e52f1" target="_blank">11b0a4d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -516,7 +516,6 @@ Untracked files:
 
 Unstaged changes:
     Modified:   analysis/define_interactions.Rmd
-    Modified:   analysis/qc_hic.Rmd
 
 </code></pre>
 <p>
@@ -555,6 +554,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/blob/11b0a4d007bc15d2868c3a624b69f0e7d40e52f1/analysis/define_interactions.Rmd" target="_blank">11b0a4d</a>
+</td>
+<td>
+Steve Pederson
+</td>
+<td>
+2021-08-11
+</td>
+<td>
+Updated all
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/11b0a4d007bc15d2868c3a624b69f0e7d40e52f1/docs/define_interactions.html" target="_blank">11b0a4d</a>
+</td>
+<td>
+Steve Pederson
+</td>
+<td>
+2021-08-11
+</td>
+<td>
+Updated all
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -991,7 +1024,7 @@ alpha &lt;- 0.05</code></pre>
         glue_collapse(range(gi$counts), last = &#39; &amp; &#39;),
         .sep = &quot; &quot;
       ),
-      &quot;\n&quot;
+      &quot;\n\n&quot;
     )
     
   }
@@ -1039,7 +1072,7 @@ alpha &lt;- 0.05</code></pre>
     labs(
       x = &quot;Chromosome&quot;,
       y = &quot;Chromosome&quot;,
-      fill = &quot;Bin/Pairs&quot;
+      fill = &quot;Bin\nPairs&quot;
     ) +
     theme(
       axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
@@ -1050,7 +1083,7 @@ alpha &lt;- 0.05</code></pre>
     width = 8, height = 6
   )
   cat(
-    glue(&quot;![*Trans interactions by chromosome using {sz/1e3}kb bins. Numeric values in the upper corner are only shown for bins with &gt; 1% of the retained interactions*](assets/interaction_summary_{sz}_trans.png)&quot;),
+    glue(&quot;![*Trans interactions by chromosome using {sz/1e3}kb bins. Numeric values in the upper section are only shown for chromosome pairs with &gt; 1% of the retained trans interactions*](assets/interaction_summary_{sz}_trans.png)&quot;),
     &quot;\n&quot;
   )
   cat(&quot;\n\n&quot;)
@@ -1060,36 +1093,56 @@ alpha &lt;- 0.05</code></pre>
 <h2 class="tabset">5kb Bins</h2>
 <ul>
 <li>71 bin-pair interactions were retained. This represented 0.00% of all interactions detected in the dataset.</li>
-<li>The observed interactions between retained bin-pairs ranged between 11 &amp; 2055 <img src="assets/interaction_summary_5000_trans.png" alt="Trans interactions by chromosome using 5kb bins. Numeric values in the upper corner are only shown for bins with &gt; 1% of the retained interactions" /></li>
+<li>The observed interactions between retained bin-pairs ranged between 11 &amp; 2055</li>
 </ul>
+<div class="figure">
+<img src="assets/interaction_summary_5000_trans.png" alt="" />
+<p class="caption"><em>Trans interactions by chromosome using 5kb bins. Numeric values in the upper section are only shown for chromosome pairs with &gt; 1% of the retained trans interactions</em></p>
+</div>
 </div>
 <div id="kb-bins-6" class="section level2 tabset">
 <h2 class="tabset">10kb Bins</h2>
 <ul>
 <li>158 bin-pair interactions were retained. This represented 0.00% of all interactions detected in the dataset.</li>
-<li>The observed interactions between retained bin-pairs ranged between 10 &amp; 2306 <img src="assets/interaction_summary_10000_trans.png" alt="Trans interactions by chromosome using 10kb bins. Numeric values in the upper corner are only shown for bins with &gt; 1% of the retained interactions" /></li>
+<li>The observed interactions between retained bin-pairs ranged between 10 &amp; 2306</li>
 </ul>
+<div class="figure">
+<img src="assets/interaction_summary_10000_trans.png" alt="" />
+<p class="caption"><em>Trans interactions by chromosome using 10kb bins. Numeric values in the upper section are only shown for chromosome pairs with &gt; 1% of the retained trans interactions</em></p>
+</div>
 </div>
 <div id="kb-bins-7" class="section level2 tabset">
 <h2 class="tabset">20kb Bins</h2>
 <ul>
 <li>465 bin-pair interactions were retained. This represented 0.00% of all interactions detected in the dataset.</li>
-<li>The observed interactions between retained bin-pairs ranged between 10 &amp; 2306 <img src="assets/interaction_summary_20000_trans.png" alt="Trans interactions by chromosome using 20kb bins. Numeric values in the upper corner are only shown for bins with &gt; 1% of the retained interactions" /></li>
+<li>The observed interactions between retained bin-pairs ranged between 10 &amp; 2306</li>
 </ul>
+<div class="figure">
+<img src="assets/interaction_summary_20000_trans.png" alt="" />
+<p class="caption"><em>Trans interactions by chromosome using 20kb bins. Numeric values in the upper section are only shown for chromosome pairs with &gt; 1% of the retained trans interactions</em></p>
+</div>
 </div>
 <div id="kb-bins-8" class="section level2 tabset">
 <h2 class="tabset">40kb Bins</h2>
 <ul>
 <li>1,434 bin-pair interactions were retained. This represented 0.01% of all interactions detected in the dataset.</li>
-<li>The observed interactions between retained bin-pairs ranged between 9 &amp; 2375 <img src="assets/interaction_summary_40000_trans.png" alt="Trans interactions by chromosome using 40kb bins. Numeric values in the upper corner are only shown for bins with &gt; 1% of the retained interactions" /></li>
+<li>The observed interactions between retained bin-pairs ranged between 9 &amp; 2375</li>
 </ul>
+<div class="figure">
+<img src="assets/interaction_summary_40000_trans.png" alt="" />
+<p class="caption"><em>Trans interactions by chromosome using 40kb bins. Numeric values in the upper section are only shown for chromosome pairs with &gt; 1% of the retained trans interactions</em></p>
+</div>
 </div>
 <div id="kb-bins-9" class="section level2 tabset">
 <h2 class="tabset">100kb Bins</h2>
 <ul>
 <li>3,700 bin-pair interactions were retained. This represented 0.03% of all interactions detected in the dataset.</li>
-<li>The observed interactions between retained bin-pairs ranged between 8 &amp; 2409 <img src="assets/interaction_summary_100000_trans.png" alt="Trans interactions by chromosome using 100kb bins. Numeric values in the upper corner are only shown for bins with &gt; 1% of the retained interactions" /></li>
+<li>The observed interactions between retained bin-pairs ranged between 8 &amp; 2409</li>
 </ul>
+<div class="figure">
+<img src="assets/interaction_summary_100000_trans.png" alt="" />
+<p class="caption"><em>Trans interactions by chromosome using 100kb bins. Numeric values in the upper section are only shown for chromosome pairs with &gt; 1% of the retained trans interactions</em></p>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">

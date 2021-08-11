@@ -1,0 +1,16 @@
+## merge_statfiles.py
+## dir= hic_results/data//SRR12576438/
+## pattern= *.RSstat
+## Merging 1 files
+## Use /mnt/d/MDA-MB-453-H3K27Ac-HiChIP/data/hic/hic_results/data/SRR12576438/SRR12576438_GRCh37.primary_assembly.genome.bwt2pairs.RSstat as template
+Valid_interaction_pairs	61682897
+Valid_interaction_pairs_FF	15396954
+Valid_interaction_pairs_RR	15411128
+Valid_interaction_pairs_RF	15401652
+Valid_interaction_pairs_FR	15473163
+Dangling_end_pairs	3296055
+Religation_pairs	573830
+Self_Cycle_pairs	134744
+Single-end_pairs	0
+Filtered_pairs	0
+Dumped_pairs	2284

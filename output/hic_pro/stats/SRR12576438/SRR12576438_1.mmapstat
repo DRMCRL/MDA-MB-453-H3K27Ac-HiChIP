@@ -1,0 +1,9 @@
+## merge_statfiles.py
+## dir= bowtie_results/bwt2/SRR12576438/
+## pattern= *_1*.mapstat
+## Merging 1 files
+## Use /mnt/d/MDA-MB-453-H3K27Ac-HiChIP/data/hic/bowtie_results/bwt2/SRR12576438/SRR12576438_1_GRCh37.primary_assembly.genome.mapstat as template
+total_R1	86971480
+mapped_R1	83451884
+global_R1	17501585
+local_R1	65950299
