@@ -481,16 +481,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree26f81604ae0902fb70464b2f6965a0807918bb9atargetblank26f8160a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/26f81604ae0902fb70464b2f6965a0807918bb9a" target="_blank">26f8160</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree7cf46948febef6818ce9540c71d01a1612f91b0etargetblank7cf4694a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/7cf46948febef6818ce9540c71d01a1612f91b0e" target="_blank">7cf4694</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree26f81604ae0902fb70464b2f6965a0807918bb9atargetblank26f8160a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLMDAMB453H3K27AcHiChIPtree7cf46948febef6818ce9540c71d01a1612f91b0etargetblank7cf4694a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/26f81604ae0902fb70464b2f6965a0807918bb9a" target="_blank">26f8160</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/tree/7cf46948febef6818ce9540c71d01a1612f91b0e" target="_blank">7cf4694</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -557,6 +557,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/blob/7cf46948febef6818ce9540c71d01a1612f91b0e/analysis/qc_hic.Rmd" target="_blank">7cf4694</a>
+</td>
+<td>
+Steve Pederson
+</td>
+<td>
+2021-08-13
+</td>
+<td>
+Corrected section levels
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DRMCRL/MDA-MB-453-H3K27Ac-HiChIP/6dfbea4f8d0e0e936e2b4cd5369a1a60db5d4fb6/docs/qc_hic.html" target="_blank">6dfbea4</a>
+</td>
+<td>
+Steve Pederson
+</td>
+<td>
+2021-08-13
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -754,8 +788,8 @@ theme_set(theme_bw())</code></pre>
     function(x){length(unique(x)) &lt; length(x)},
     as.factor
   )</code></pre>
-<div id="restriction-fragment-sizes" class="section level2">
-<h2>Restriction Fragment Sizes</h2>
+<div id="restriction-fragment-sizes" class="section level1">
+<h1>Restriction Fragment Sizes</h1>
 <pre class="r"><code>here::here(&quot;output&quot;, config$ref$build, &quot;fragment_length.counts&quot;) %&gt;% 
   read_delim(
     col_names = c(&quot;count&quot;, &quot;fragment_length&quot;), 
@@ -850,10 +884,10 @@ Steve Pederson
 </div>
 </div>
 </div>
-<div id="mapping-statistics" class="section level2 tabset">
-<h2>Mapping Statistics</h2>
-<div id="individual-read-mapping" class="section level3">
-<h3>Individual Read Mapping</h3>
+<div id="mapping-statistics" class="section level1 tabset">
+<h1>Mapping Statistics</h1>
+<div id="individual-read-mapping" class="section level2">
+<h2>Individual Read Mapping</h2>
 <pre class="r"><code>here::here(&quot;output&quot;, &quot;hic_pro&quot;) %&gt;% 
   list.files(
     pattern = &quot;mmapstat&quot;,
@@ -1010,8 +1044,8 @@ Steve Pederson
 </div>
 </div>
 </div>
-<div id="paired-mapping" class="section level3">
-<h3>Paired Mapping</h3>
+<div id="paired-mapping" class="section level2">
+<h2>Paired Mapping</h2>
 <pre class="r"><code>paired_df &lt;- here::here(&quot;output&quot;, &quot;hic_pro&quot;) %&gt;% 
   list.files(
     pattern = &quot;mpairstat&quot;,
@@ -1156,8 +1190,8 @@ Steve Pederson
 </div>
 </div>
 </div>
-<div id="mapping-to-restriction-fragments" class="section level3">
-<h3>Mapping To Restriction Fragments</h3>
+<div id="mapping-to-restriction-fragments" class="section level2">
+<h2>Mapping To Restriction Fragments</h2>
 <pre class="r"><code>bl &lt;- hcl.colors(5, &quot;Blues&quot;)[1:4]
 rd &lt;- hcl.colors(4, &quot;YlOrRd&quot;)
 here::here(&quot;output&quot;, &quot;hic_pro&quot;) %&gt;% 
@@ -1313,8 +1347,8 @@ Steve Pederson
 </div>
 </div>
 </div>
-<div id="contact-ranges" class="section level3">
-<h3>Contact Ranges</h3>
+<div id="contact-ranges" class="section level2">
+<h2>Contact Ranges</h2>
 <pre class="r"><code>here::here(&quot;output&quot;, &quot;hic_pro&quot;) %&gt;% 
   list.files(
     pattern = &quot;mergestat&quot;,
@@ -1490,10 +1524,10 @@ Steve Pederson
 </div>
 </div>
 </div>
-<div id="hic-fragment-sizes" class="section level2 tabset">
-<h2>HiC Fragment Sizes</h2>
+<div id="hic-fragment-sizes" class="section level1 tabset">
+<h1>HiC Fragment Sizes</h1>
 <pre class="r"><code>for (s in levels(samples$sample)) {
-  cat(&quot;###&quot;, s, &quot;\n&quot;)
+  cat(&quot;##&quot;, s, &quot;\n&quot;)
   cat(&quot;\n&quot;)
   png_path &lt;- file.path(&quot;assets&quot;, glue(&quot;plotHiCFragmentSize_{s}.png&quot;))
   cat(
@@ -1503,8 +1537,8 @@ Steve Pederson
     &quot;\n\n&quot;
   )
 }</code></pre>
-<div id="srr12576438" class="section level3">
-<h3>SRR12576438</h3>
+<div id="srr12576438" class="section level2">
+<h2>SRR12576438</h2>
 <div class="figure">
 <img src="assets/plotHiCFragmentSize_SRR12576438.png" alt="Fragment sizes for SRR12576438" />
 <p class="caption"><em>Fragment sizes for SRR12576438</em></p>
